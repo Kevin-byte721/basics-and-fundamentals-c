@@ -2,25 +2,39 @@
 using namespace std;
 
 void display(string name, int age, bool isMarried) {
-    cout << "Hello World " << name << endl; 
+    string married = (isMarried ? "yes" : "no");
+    cout << "Hello World " << name << endl;
     cout << "Age " << age << endl;
-    cout << "Is Married? " << isMarried << endl; 
+    cout << "Is Married? " << married << endl;
 }
-
-// value returning function
-// string, int, double, bool
 
 string fullName(string firstName, string lastName) {
     return firstName + " " + lastName;
 }
 
-double calculateAreaofTriangle(double base, double height) {
-    double area = (base * height) /2;
-    return area;
+string ageIndentifier(int age) {
+    string status = (age >= 18 && age < 60 ? "Gen-Z" : "Senior") ;
+    return status;
 }
 
+double calculateAreaofTriangle(double base, double height) {
+    double area = (base * height) / 2;
+    return area;
+}
+class AreaCalculator{
+    public:
+    double areaOfTriangle(double base, double height) {
+        double area = (base * height)/2;
+        return area;
+    }
+};
+
 int main() {
-    cout << fullName("John", "Doe") << endl;
-    cout << calculateAreaofTriangle(20, 2);
+    display("John", 30, true);
+    cout << endl;
+    cout << calculateAreaofTriangle(20, 2) << endl;
+    cout << endl << ageIndentifier(60) << endl;
+    AreaCalculator area;
+    cout << area.areaOfTriangle(10,2);
     return 0;
 }

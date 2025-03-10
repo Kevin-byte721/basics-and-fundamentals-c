@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cmath>
+#include <math.h>
+
 using namespace std;
 
 void display(string name, int age, bool isMarried) {
@@ -25,16 +28,29 @@ class AreaCalculator{
     public:
     double areaOfTriangle(double base, double height) {
         double area = (base * height)/2;
+        cout << "Area of Triangle: ";
+        return area;
+    }
+    double areaOfRectangle(double length, double width) {
+        double area = length * width;
+        cout << "Area of Rectangle: ";
+        return area;
+    }
+    double areaOfCircle(int radius) {
+        double area = 3.14159 * pow(radius, 2);
+        cout << "Area of Circle: ";
         return area;
     }
 };
 
+
 int main() {
     display("John", 30, true);
     cout << endl;
-    cout << calculateAreaofTriangle(20, 2) << endl;
     cout << endl << ageIndentifier(60) << endl;
     AreaCalculator area;
-    cout << area.areaOfTriangle(10,2);
+    cout << area.areaOfTriangle(10,2) << endl;
+    cout << area.areaOfCircle(10) << endl;
+    cout << area.areaOfRectangle(10, 2);
     return 0;
 }

@@ -35,7 +35,7 @@ class Shoes {
 };
 
 int main() {
-	Shoes shoesobj1("Nike", 11, "Black", 1200.05, "Running");
+	Shoes shoesobj1("Vans", 11, "Black", 1200.05, "Running");
 	
 	Shoes shoesobj2("Adidas", 10, "Gray", 1100.54, "Walking"); 
 	
